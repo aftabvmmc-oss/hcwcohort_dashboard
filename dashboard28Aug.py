@@ -850,9 +850,9 @@ if datasets:
                 surv_ll_disp = surv_ll[[c for c in display_cols_2a if c in surv_ll.columns]].fillna('')
                 
                 st.dataframe(
-                    style_sub(surv_ll_disp), use_container_width=True, hide_index=True,
+                    surv_ll_disp, use_container_width=True, hide_index=True,
                     column_config={"Serial No.": st.column_config.NumberColumn("S.No.", width="small")}
-                )
+                    )
             else:
                 st.info("No surveillance forms filled in the selected date range.")
         else:
